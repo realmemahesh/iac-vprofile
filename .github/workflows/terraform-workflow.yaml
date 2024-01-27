@@ -7,7 +7,7 @@ on:
       - stage
     paths:
       - terraform/**
-  pull_requests:
+  pull_request:
     branches:
       - main
     paths:
@@ -18,7 +18,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   BUCKET_TF_STATE: ${{ secrets.BUCKET_TF_STATE }}
 
-  jobs:
+jobs:
     terraform:
       name: Apply terraform code changes
       runs-on: ubuntu-latest
